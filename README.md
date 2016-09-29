@@ -33,3 +33,7 @@ setMaster("spark://Alicans-MacBook-Pro.local:7077"); - Spark running port. You c
     	<version>1.6.1</version>
 	</dependency>	
 </dependencies>
+
+
+Apache MLLib Library for cluster algorithm.
+Apache Spark for monitoring.
