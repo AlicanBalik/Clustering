@@ -34,7 +34,11 @@
 		<version>1.6.1</version>
 		</dependency>	
 	</dependencies>
+	
+First we should start Apache Spark `./sbin/start-all.sh`. Then submit your project `./bin/spark-submit /project/path`
+Note: If you use `args[0] `eg:`jsc.textFile(args[0])` for setting dataset directory, you should submit the project as `./bin/spark-submit /project/path /dataset/path`.
+When execution is over, you can compute cluster(s) on Apache Spark Admin Panel.
 
 
-Apache MLLib Library for cluster algorithm.
-Apache Spark for monitoring.
+[Apache MLLib Library](http://spark.apache.org/mllib/) for cluster algorithm.
+[Apache Spark](http://spark.apache.org) for monitoring.
