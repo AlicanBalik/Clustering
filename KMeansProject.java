@@ -42,24 +42,16 @@ public class KMeansProject {
 		    int numClusters = 2;
 		    int numIterations = 999;
 		    KMeansModel clusters = KMeans.train(parsedData.rdd(), numClusters, numIterations);
-		    System.out.println("**********************************************************");
-		    System.out.println("**********************************************************");
-		    System.out.println("**********************************************************");
-		    System.out.println("**********************************************************");
-		    System.out.println("**********************************************************");
 		    System.out.println("***************************** Cluster centers: *****************************");
 		    for (Vector center: clusters.clusterCenters()) {
 		      System.out.println(" " + center);
 		    }
-		    System.out.println("**********************************************************");
 		    double cost = clusters.computeCost(parsedData.rdd());
 		    System.out.println("***************************** Cost: " + cost);
-		    System.out.println("**********************************************************");
 
 		    // Evaluate clustering by computing Within Set Sum of Squared Errors
 		    double WSSSE = clusters.computeCost(parsedData.rdd());
 		    System.out.println("***************************** Within Set Sum of Squared Errors = " + WSSSE);
-		    System.out.println("**********************************************************");
 		    
 		    // Save and load model
 		    clusters.save(jsc.sc(), "/Users/alicanbalik/Desktop/KMeansProject");
