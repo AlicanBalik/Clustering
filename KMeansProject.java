@@ -1,19 +1,5 @@
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.api.java.function.Function;
-import org.apache.spark.mllib.clustering.KMeans;
-import org.apache.spark.mllib.clustering.KMeansModel;
-import org.apache.spark.mllib.linalg.Vector;
-import org.apache.spark.mllib.linalg.Vectors;
-import org.apache.spark.mllib.feature.Word2Vec;
-import org.apache.spark.mllib.feature.Word2VecModel;
-
-
 public class KMeansProject {
 	
-	
-
 	public static void main(String[] args) {
 		 SparkConf conf = new SparkConf().set("spark.eventLog.enabled", "true").set("spark.eventLog.dir","/Users/alicanbalik/Desktop").set("spark.cassandra.connection.host", "127.0.0.1").setAppName("alican-app").setMaster("spark://Alicans-MacBook-Pro.local:7077");
 			JavaSparkContext jsc = new JavaSparkContext(conf);
